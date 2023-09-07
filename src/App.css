@@ -1,38 +1,162 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Noto Sans";
+  scroll-behavior: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#welcome {
+  background-image: url("../src/img/Bg.png");
 }
+#card-2 {
+  background-color: #1769ff;
+  color: #fff;
+}
+#card-2 h1 {
+  border-color: #fff;
+}
+.overlay-div:hover .overlay {
+  opacity: 0.9;
+  transition: all 0.3s;
+}
+.overlay {
+  transition: all 0.3s;
+  clip-path: polygon(
+    20% 0%,
+    80% 0%,
+    100% 0,
+    100% 80%,
+    80% 100%,
+    20% 100%,
+    0 100%,
+    0 0
+  );
+}
+.slider {
+  overflow-x: hidden;
+}
+.img-div img:last-child {
+  display: none;
+}
+.service-card:hover .img-div img:last-child {
+  display: block;
+}
+.service-card:hover .img-div img:first-child {
+  display: none;
+}
+#blog {
+  background-image: url(../src/img/feedbg.png);
+  background-size: cover;
+}
+.service-card {
+  box-shadow: 1px 9px 40px 0px rgba(0, 0, 0, 0.75);
+}
+.h-shadow {
+  text-shadow: 0px -13px #eeeeee;
+}
+#modal {
+  display: block;
+  background: rgba(245, 245, 245, 0.6);
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+.open {
+  opacity: 1;
+  transition: all 0.3s;
+}
+@media screen and (max-width: 400px) {
+  #welcome {
+    background-position: inherit;
+  }
+}
+.loader {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.jimu-primary-loading:before,
+.jimu-primary-loading:after {
+  position: absolute;
+  top: 0;
+  content: "";
+}
+.jimu-primary-loading:before {
+  left: -19.992px;
+}
+.jimu-primary-loading:after {
+  left: 19.992px;
+  -webkit-animation-delay: 0.32s !important;
+  animation-delay: 0.32s !important;
+}
+.jimu-primary-loading:before,
+.jimu-primary-loading:after,
+.jimu-primary-loading {
+  background: #076fe5;
+  -webkit-animation: loading-keys-app-loading 0.8s infinite ease-in-out;
+  animation: loading-keys-app-loading 0.8s infinite ease-in-out;
+  width: 13.6px;
+  height: 32px;
+}
+.jimu-primary-loading {
+  text-indent: -9999em;
+  margin: auto;
+  position: absolute;
+  right: calc(50% - 6.8px);
+  top: calc(50% - 16px);
+  -webkit-animation-delay: 0.16s !important;
+  animation-delay: 0.16s !important;
+}
+@-webkit-keyframes loading-keys-app-loading {
+  0%,
+  80%,
+  100% {
+    opacity: 0.75;
+    box-shadow: 0 0 #076fe5;
+    height: 32px;
+  }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  40% {
+    opacity: 1;
+    box-shadow: 0 -8px #076fe5;
+    height: 40px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes loading-keys-app-loading {
+  0%,
+  80%,
+  100% {
+    opacity: 0.75;
+    box-shadow: 0 0 #076fe5;
+    height: 32px;
   }
-  to {
-    transform: rotate(360deg);
+
+  40% {
+    opacity: 1;
+    box-shadow: 0 -8px #076fe5;
+    height: 40px;
   }
+}
+.loaded_hiding .loader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+.loaded .loader {
+  display: none;
+}
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #bfbfbf;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a5a5a5;
 }
