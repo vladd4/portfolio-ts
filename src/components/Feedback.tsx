@@ -4,7 +4,7 @@ import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import Avatar from '../img/feedback.png'
-import { feedbackUsers } from "../feedbackUsers";
+import { feedbackUsers } from "../store/feedbackUsers";
 
 const Feedback:FC =() => {
     return (

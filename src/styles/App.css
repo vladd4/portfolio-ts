@@ -6,9 +6,8 @@ body {
   font-family: "Noto Sans";
   scroll-behavior: auto;
 }
-
 #welcome {
-  background-image: url("../src/img/Bg.png");
+  background-image: url("../../src/img/Bg.png");
 }
 #card-2 {
   background-color: #1769ff;
@@ -47,7 +46,7 @@ body {
   display: none;
 }
 #blog {
-  background-image: url(../src/img/feedbg.png);
+  background-image: url(../../src/img/feedbg.png);
   background-size: cover;
 }
 .service-card {
@@ -61,10 +60,14 @@ body {
   background: rgba(245, 245, 245, 0.6);
   box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
+  transform: translate(-50%, -320%);
+  position: fixed;
+  z-index: 1001;
 }
 .open {
   opacity: 1;
-  transition: all 0.3s;
+  transition: all 0.4s;
+  transform: translate(-50%, -50%) !important;
 }
 @media screen and (max-width: 400px) {
   #welcome {

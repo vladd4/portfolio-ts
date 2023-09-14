@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import './App.css';
+import './styles/App.css';
 import Welcome from './components/Welcome';
 import Services from './components/Services';
 import Portfolio from './components/Portfolio';
